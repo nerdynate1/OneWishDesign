@@ -1,1 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        background-color: #f5f5f5;
+      }
+      h1 {
+        text-align: center;
+        color: #333;
+      }
+      .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 15px;
+        margin-bottom: 20px;
+      }
+      .photo {
+        border: 2px solid #ddd;
+        border-radius: 8px;
+        overflow: hidden;
+        background: white;
+      }
+      .photo img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+      }
+      .photo-title {
+        padding: 10px;
+        text-align: center;
+        font-weight: bold;
+        color: #555;
+      }
+      .hidden-photos {
+        display: none;
+      }
+      .hidden-photos.show {
+        display: block;
+      }
+      .expand-btn {
+        display: block;
+        margin: 0 auto 20px auto;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Gallery</h1>
 
+    <div class="gallery">
+      <div class="photo">
+        <img src="https://picsum.photos/400/300?random=1" alt="Photo 1" />
+      </div>
+      <div class="photo">
+        <img src="https://picsum.photos/400/300?random=2" alt="Photo 2" />
+      </div>
+      <div class="photo">
+        <img src="https://picsum.photos/400/300?random=3" alt="Photo 3" />
+      </div>
+    </div>
+
+    <button class="expand-btn" onclick="toggleGallery()" id="expandBtn">
+      View More Photos
+    </button>
+
+    <div class="hidden-photos" id="hiddenPhotos">
+      <div class="gallery">
+        <div class="photo">
+          <img src="https://picsum.photos/400/300?random=4" alt="Photo 4" />
+        </div>
+        <div class="photo">
+          <img src="https://picsum.photos/400/300?random=5" alt="Photo 5" />
+        </div>
+        <div class="photo">
+          <img src="https://picsum.photos/400/300?random=6" alt="Photo 6" />
+        </div>
+        <div class="photo">
+          <img src="https://picsum.photos/400/300?random=7" alt="Photo 7" />
+        </div>
+      </div>
+    </div>
+    <script>
+      let expanded = false;
+      function toggleGallery() {
+        const hiddenPhotos = document.getElementById("hiddenPhotos");
+        const expandBtn = document.getElementById("expandBtn");
+        if (!expanded) {
+          hiddenPhotos.classList.add("show");
+          expandBtn.textContent = "Show Less";
+          expanded = true;
+        } else {
+          hiddenPhotos.classList.remove("show");
+          expandBtn.textContent = "View More Photos";
+          expanded = false;
+        }
+      }
+
+      let expanded2 = false;
+      function toggleGallery2() {
+        const hiddenPhotos2 = document.getElementById("hiddenPhotos2");
+        const expandBtn2 = document.getElementById("expandBtn2");
+        if (!expanded2) {
+          hiddenPhotos2.classList.add("show");
+          expandBtn2.textContent = "Show Less";
+          expanded2 = true;
+        } else {
+          hiddenPhotos2.classList.remove("show");
+          expandBtn2.textContent = "View More Photos";
+          expanded2 = false;
+        }
+      }
+    </script>
+    <hr style="margin: 40px 0" />
+    <div class="gallery">
+      <div class="photo">
+        <img src="https://picsum.photos/400/300?random=11" alt="Photo 11" />
+      </div>
+      <div class="photo">
+        <img src="https://picsum.photos/400/300?random=12" alt="Photo 12" />
+      </div>
+      <div class="photo">
+        <img src="https://picsum.photos/400/300?random=13" alt="Photo 13" />
+      </div>
+    </div>
+    <button class="expand-btn" onclick="toggleGallery2()" id="expandBtn2">
+      View More Photos
+    </button>
+    <div class="hidden-photos" id="hiddenPhotos2">
+      <div class="gallery">
+        <div class="photo">
+          <img src="https://picsum.photos/400/300?random=14" alt="Photo 14" />
+        </div>
+        <div class="photo">
+          <img src="https://picsum.photos/400/300?random=15" alt="Photo 15" />
+        </div>
+        <div class="photo">
+          <img src="https://picsum.photos/400/300?random=16" alt="Photo 16" />
+        </div>
+        <div class="photo">
+          <img src="https://picsum.photos/400/300?random=17" alt="Photo 17" />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
