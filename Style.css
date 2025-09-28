@@ -1,1 +1,644 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Schoolbell&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  zoom: 1.1;
+  background-color: #e8f4f8;
+}
+
+.pageWrapper {
+  display: flex;
+  min-height: 100vh;
+}
+
+.mainContent {
+  flex: 1;
+  transition: margin-left 0.5s ease;
+  width: 100%;
+}
+
+.cakePic {
+  position: relative;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.cake {
+  width: 100%;
+  height: 70vh;
+  display: block;
+}
+
+.mainPicture {
+  position: absolute;
+  bottom: 6%;
+  left: 5%;
+  border-radius: 8px;
+  text-align: center;
+  z-index: 10;
+}
+
+.logo,
+.logo2 {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  position: absolute;
+  bottom: 40%;
+  z-index: 11;
+}
+
+.logo {
+  left: 8%;
+}
+
+.logo2 {
+  right: 8%;
+}
+
+h1 {
+  text-align: center;
+  color: pink;
+  font-weight: 800;
+  pointer-events: none;
+  font-family: "Schoolbell", cursive;
+}
+
+#Options {
+  display: none;
+  visibility: hidden;
+  -webkit-appearance: none;
+}
+
+.select {
+  position: fixed;
+  height: 30px;
+  width: 30px;
+  top: 20px;
+  left: 15px;
+  z-index: 1000;
+  cursor: pointer;
+  border-radius: 2px;
+  background-color: pink;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.select .common {
+  position: absolute;
+  height: 5px;
+  width: 20px;
+  background-color: rgb(29, 176, 221);
+  border-radius: 50px;
+  transition: 0.3s ease;
+}
+
+.select .top_Line {
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.select .middle_Line {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.select .bottom_Line {
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.Menu {
+  height: 100vh;
+  width: 180px;
+  background-color: rgb(14, 213, 248);
+  position: fixed;
+  left: 0;
+  top: 0;
+  transition: 0.5s ease;
+  transform: translateX(-180px);
+  z-index: 998;
+}
+
+h2 {
+  color: #8000ff;
+  font-weight: 800;
+  text-align: right;
+  padding: 10px 0;
+  padding-right: 30px;
+  pointer-events: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+ul li a {
+  color: #f7a1e3;
+  font-weight: 500;
+  display: block;
+  padding: 5px 0;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: 0.2s ease-out;
+}
+
+ul li a i {
+  width: 40px;
+  text-align: center;
+}
+
+ul li a:hover {
+  color: rgb(29, 176, 221);
+  background-color: #f7a1e3;
+}
+
+#Options:checked ~ .mainContent {
+  margin-left: 180px;
+}
+
+#Options:checked ~ .Menu {
+  transform: translateX(0);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+#Options:checked ~ .select .top_Line {
+  left: 2px;
+  top: 14px;
+  width: 25px;
+  transform: rotate(45deg);
+}
+
+#Options:checked ~ .select .bottom_Line {
+  left: 2px;
+  top: 14px;
+  width: 25px;
+  transform: rotate(-45deg);
+}
+
+#Options:checked ~ .select .middle_Line {
+  opacity: 0;
+  transform: translatex(20px);
+}
+
+.mainSection,
+.instagramSection {
+  padding: 40px 20px;
+  background-color: #e8f4f8;
+}
+
+.middleSection h3,
+.instagramHeader h3 {
+  font-size: 2.5em;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.middleSection p {
+  color: #2c3e50;
+  text-align: center;
+  padding-left: 70px;
+  padding-right: 70px;
+}
+
+.videoBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: #e8f4f8;
+  padding: 0;
+  margin: 15px auto;
+  border-radius: 8px;
+  min-height: 300px;
+  max-width: 900px;
+  width: 90%;
+}
+
+.videoContainer {
+  position: relative;
+  width: 60%;
+  max-width: 800px;
+  align-items: center;
+  padding-bottom: 30%;
+  margin: 0 auto;
+}
+
+.youtube-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.video-text p {
+  color: #2c3e50;
+  line-height: 1.7;
+  font-size: 1.6em;
+  font-weight: 600;
+  text-align: center;
+  margin: 0;
+  padding: 0 20px;
+}
+
+.imageTextContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  justify-content: flex-start;
+  padding: 0 40px;
+  margin-top: 20px;
+}
+
+.imageTextSection {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  max-width: 800px;
+  background-color: #e8f4f8;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.sideImage {
+  max-width: 40%;
+  object-fit: cover;
+}
+
+.sideText {
+  flex: 1;
+}
+
+.sideText h3 {
+  font-size: 1.8em;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #f7a1e3;
+  font-family: "Schoolbell", cursive;
+}
+
+.sideText p {
+  color: #2c3e50;
+  font-size: 1.2em;
+  line-height: 1.6;
+  text-align: left;
+}
+
+.imageTextSection.flipped {
+  flex-direction: row-reverse;
+}
+
+.imageTextSection.alignRight {
+  align-self: flex-end;
+}
+
+.imageTextSection.flipped.alignRight {
+  flex-direction: row-reverse;
+}
+
+.instagramSection {
+  text-align: center;
+}
+
+.instagramHeader {
+  margin-bottom: 20px;
+}
+
+.instagramLink {
+  font-size: 1.5em;
+  color: #125688;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.instagramLink:hover {
+  color: #0d3b5e;
+}
+
+.instagramGallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 15px;
+  justify-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.instaItem {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.instaItem:hover {
+  transform: translateY(-5px);
+}
+
+.instaThumb {
+  display: block;
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.instaItem:hover .instaThumb {
+  transform: scale(1.05);
+  filter: brightness(60%);
+}
+
+.instaOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  text-align: center;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.instaItem:hover .instaOverlay {
+  opacity: 1;
+}
+
+.instaCaption {
+  font-size: 0.9em;
+  line-height: 1.4;
+}
+
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  padding: 20px;
+  box-sizing: border-box;
+  flex-direction: column;
+}
+
+.lightboxImage {
+  max-width: 90%;
+  max-height: 80%;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.lightboxCaption {
+  color: #fff;
+  margin-top: 15px;
+  font-size: 1.2em;
+  text-align: center;
+  max-width: 80%;
+}
+
+.lightboxLogo {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+}
+
+.lightboxLogo img {
+  width: 40px;
+  height: auto;
+}
+
+.lightboxClose {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: #fff;
+  font-size: 2em;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.lightboxClose:hover {
+  color: #e1306c;
+}
+
+@media (max-width: 768px) {
+  .middleSection p {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .videoContainer {
+    width: 90%;
+    padding-bottom: 50%;
+  }
+
+  .imageTextContainer {
+    padding: 0 20px;
+  }
+
+  .imageTextSection {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .sideImage {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .sideText p {
+    text-align: center;
+  }
+
+  .imageTextSection.flipped,
+  .imageTextSection.alignRight,
+  .imageTextSection.flipped.alignRight {
+    flex-direction: column;
+    align-self: center;
+  }
+
+  .instagramGallery {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 10px;
+  }
+
+  .instaThumb {
+    height: 120px;
+  }
+
+  .lightboxImage {
+    max-width: 95%;
+    max-height: 60%;
+  }
+
+  .lightboxCaption {
+    font-size: 1em;
+  }
+
+  .lightboxClose {
+    top: 10px;
+    right: 15px;
+    font-size: 30px;
+  }
+
+  .lightboxLogo {
+    top: 15px;
+    right: 15px;
+  }
+
+  .lightboxLogo img {
+    width: 30px;
+  }
+}
+
+.siteFooter {
+  background-color: rgb(14, 213, 248);
+  color: white;
+  padding: 40px 20px 20px;
+  margin-top: 40px;
+}
+
+.footerContent {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footerSection h3 {
+  color: #8000ff;
+  font-size: 1.8em;
+  margin-bottom: 15px;
+  font-family: "Schoolbell", cursive;
+}
+
+.footerSection h4 {
+  color: #f7a1e3;
+  font-size: 1.3em;
+  margin-bottom: 15px;
+  border-bottom: 2px solid rgba(247, 161, 227, 0.3);
+  padding-bottom: 5px;
+}
+
+.footerSection p {
+  color: white;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.footerSection ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footerSection ul li {
+  margin-bottom: 8px;
+}
+
+.footerSection ul li a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footerSection ul li a:hover {
+  color: rgb(14, 213, 248);
+}
+
+.socialLinks {
+  display: flex;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.socialLinks a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.socialLinks a:hover {
+  background-color: #f7a1e3;
+  transform: translateY(-3px);
+}
+
+.contactInfo p {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.contactInfo i {
+  margin-right: 10px;
+  width: 20px;
+  text-align: center;
+  color: #f7a1e3;
+}
+
+.footerBottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  margin-top: 30px;
+  padding-top: 20px;
+  text-align: center;
+}
+
+.footerBottom p {
+  color: white;
+  font-size: 0.9em;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .footerContent {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .footerSection {
+    text-align: center;
+  }
+
+  .socialLinks {
+    justify-content: center;
+  }
+
+  .contactInfo p {
+    justify-content: center;
+  }
+}
 
