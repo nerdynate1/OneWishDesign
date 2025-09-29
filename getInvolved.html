@@ -6,6 +6,60 @@
     <title>Get Involved | One Wish Project</title>
     <!-- Link your existing CSS file -->
     <link rel="stylesheet" href="Style.css" />
+    <style>
+      .get-involved-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Two columns */
+        gap: 20px; /* Space between grid items */
+        padding: 20px;
+      }
+
+      .get-involved-grid .card {
+        background-color: #f9f9f9;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        text-align: center;
+        padding: 15px;
+      }
+
+      .get-involved-grid .card img {
+        width: 100%;
+        height: auto;
+        border-bottom: 1px solid #ddd;
+        margin-bottom: 15px;
+      }
+
+      .get-involved-grid .card h2 {
+        font-size: 20px;
+        margin: 10px 0;
+        color: #333;
+        text-align: center;
+      }
+
+      .get-involved-grid .card p {
+        font-size: 16px;
+        color: #666;
+        margin-bottom: 15px;
+      }
+
+      .get-involved-grid .card .btn {
+        display: inline-block;
+        padding: 10px 20px;
+        font-size: 16px;
+        color: white;
+        background-color: #007bff;
+        border: none;
+        border-radius: 5px;
+        text-decoration: none;
+        cursor: pointer;
+      }
+
+      .get-involved-grid .card .btn:hover {
+        background-color: #0056b3;
+      }
+    </style>
   </head>
   <body>
     <div class="pageWrapper">
@@ -62,7 +116,6 @@
         <section class="get-involved-grid">
           <!-- Card 1 -->
           <div class="card">
-            <img src="images/donation.jpg" alt="Child smiling" />
             <h2>Make a Tax-Deductible Donation</h2>
             <p>
               Your donation will help us bring birthday joy to homeless and
@@ -73,7 +126,6 @@
 
           <!-- Card 2 -->
           <div class="card">
-            <img src="images/volunteer.jpg" alt="Volunteer with child" />
             <h2>Volunteer Sponsor a Birthday</h2>
             <p>
               Help us celebrate children in need by delivering cakes, presents,
