@@ -4,457 +4,396 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gallery</title>
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        margin: 20px;
-        background-color: #f5f5f5;
-      }
-      h1 {
-        text-align: center;
-        color: #333;
-        font-weight: 400;
-      }
-      .gallery {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 25px;
-        margin-bottom: 20px;
-      }
-      .photo {
-        border: 2px solid #f7a1e3;
-        border-radius: 8px;
-        overflow: hidden;
-        background: #f7a1e3;
-      }
-      .menu-bar {
-        width: 100%;
-        background: #f7a1e3;
-        position: sticky;
-        top: 0;
-        z-index: 1000;
-        margin-bottom: 30px;
-        box-shadow: 0 2px 6px #f7a1e3;
-      }
-      .menu-bar ul {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        display: flex;
-        justify-content: center;
-        background: #f7a1e3;
-      }
-      .menu-bar li {
-        margin: 0 20px;
-        background: #f7a1e3;
-      }
-      .menu-bar a {
-        display: block;
-        color: black;
-        text-decoration: none;
-        padding: 16px 0;
-        font-size: 1.1em;
-        transition: color 0.2s;
-      }
-      .menu-bar a:hover {
-        color: #ff9800;
-      }
-      .photo img {
-        width: 150%;
-        height: 200px;
-        object-fit: cover;
-      }
-      .photo-title {
-        padding: 10px;
-        text-align: center;
-        font-weight: bold;
-        color: #555;
-      }
-      .hidden-photos {
-        display: none;
-      }
-      .hidden-photos.show {
-        display: block;
-      }
-      .expand-btn {
-        display: block;
-        margin: 0 auto 20px auto;
-      }
-      h2 {
-        text-align: center;
-        color: #444;
-        font-weight: 400;
-        margin-bottom: 10px;
-      }
-      /* Lightbox styles */
-      .lightbox {
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.8);
-        justify-content: center;
-        align-items: center;
-        z-index: 1000;
-      }
-      .lightbox img {
-        max-width: 90%;
-        max-height: 80%;
-        border: 5px solid white;
-        border-radius: 10px;
-      }
-      .lightbox-close {
-        position: absolute;
-        top: 20px;
-        right: 30px;
-        font-size: 2em;
-        color: white;
-        cursor: pointer;
-      }
-    </style>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="Style.css" />
   </head>
+
   <body>
-    <nav class="menu-bar">
-      <ul>
-        <li><a href="about.html">About</a></li>
-        <li><a href="mainpage.html">Home</a></li>
-        <li><a href="events">Events</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-      </ul>
-    </nav>
+    <div class="pageWrapper">
+      <input type="checkbox" id="Options" />
+      <label for="Options" class="select">
+        <span class="top_Line common"></span>
+        <span class="middle_Line common"></span>
+        <span class="bottom_Line common"></span>
+      </label>
 
-    <h1>Gallery</h1>
-
-    <h2>Cakes</h2>
-    <div class="gallery">
-      <div class="photo">
-        <a href="../onewishcakes/cake%20(1).jpg">
-          <img src="../onewishcakes/cake%20(1).jpg" />
-        </a>
+      <div class="Menu">
+        <h2>Menu</h2>
+        <ul>
+          <li>
+            <a href="About.html"
+              ><i class="fa-regular fa-address-card"></i> About</a
+            >
+            <a href="Contacts.html"
+              ><i class="fa-solid fa-address-book"></i> Contacts</a
+            >
+            <a href="Events.html"
+              ><i class="fa-regular fa-calendar-days"></i> Events</a
+            >
+            <a href="Gallery.html"
+              ><i class="fa-solid fa-images"></i> Gallery</a
+            >
+            <a href="Press.html"><i class="fa-solid fa-newspaper"></i> Press</a>
+            <a href="Mainpage.html"><i class="fas fa-home"></i> Home</a>
+          </li>
+        </ul>
       </div>
-      <div class="photo">
-        <a href="../onewishcakes/cake%20(2).jpg">
-          <img src="../onewishcakes/cake%20(2).jpg" />
-        </a>
-      </div>
-      <div class="photo">
-        <a href="../onewishcakes/cake%20(3).jpg">
-          <img src="../onewishcakes/cake%20(3).jpg" />
-        </a>
-      </div>
-    </div>
 
-    <button class="expand-btn" onclick="toggleGallery()" id="expandBtn">
-      View More
-    </button>
+      <div class="mainContent">
+        <header class="cakePic">
+          <img src="projectImages/cake.avif" alt="cake" class="cake" />
+          <div class="mainPicture">
+            <img
+              src="projectImages/One wish logo.jpg"
+              alt="logo"
+              class="logo"
+            />
+            <h1>
+              One Wish Project<br />Celebrating Birthdays, Delivering Hope.
+            </h1>
+            <img
+              src="projectImages/One wish logo.jpg"
+              alt="logo2"
+              class="logo2"
+            />
+          </div>
+        </header>
 
-    <div class="hidden-photos" id="hiddenPhotos">
-      <div class="gallery">
-        <div class="photo">
-          <a href="../onewishcakes/cake%20(4).jpg">
-            <img src="../onewishcakes/cake%20(4).jpg" />
-          </a>
-        </div>
-        <div class="photo">
-          <a href="../onewishcakes/cake%20(5).jpg">
-            <img src="../onewishcakes/cake%20(5).jpg" />
-          </a>
-        </div>
-        <div class="photo">
-          <a href="../onewishcakes/cake%20(6).jpg">
-            <img src="../onewishcakes/cake%20(6).jpg" />
-          </a>
-        </div>
-        <div class="photo">
-          <a href="../onewishcakes/cake%20(7).jpg">
-            <img src="../onewishcakes/cake%20(7).jpg" />
-          </a>
-        </div>
-        <div class="photo">
-          <a href="../onewishcakes/cake%20(8).jpg">
-            <img src="../onewishcakes/cake%20(8).jpg" />
-          </a>
-        </div>
-        <div class="photo">
-          <a href="../onewishcakes/cake%20(9).jpg">
-            <img src="../onewishcakes/cake%20(9).jpg" />
-          </a>
-        </div>
-        <div class="photo">
-          <a href="../onewishcakes/cake%20(10).jpg">
-            <img src="../onewishcakes/cake%20(10).jpg" />
-          </a>
-        </div>
-        <div class="photo">
-          <a href="../onewishcakes/cake%20(11).jpg">
-            <img src="../onewishcakes/cake%20(11).jpg" />
-          </a>
-        </div>
-        <div class="photo">
-          <a href="../onewishcakes/cake%20(12).jpg">
-            <img src="../onewishcakes/cake%20(12).jpg" />
-          </a>
-        </div>
-        <div class="photo">
-          <a href="../onewishcakes/cake%20(13).jpg">
-            <img src="../onewishcakes/cake%20(13).jpg" />
-          </a>
-        </div>
-        <div class="photo">
-          <a href="../onewishcakes/cake%20(14).jpg">
-            <img src="../onewishcakes/cake%20(14).jpg" />
-          </a>
-        </div>
-        <div class="photo">
-          <a href="../onewishcakes/cake%20(15).jpg">
-            <img src="../onewishcakes/cake%20(15).jpg" />
-          </a>
-        </div>
-        <div class="photo">
-          <a href="../onewishcakes/cake%20(27).jpg">
-            <img src="../onewishcakes/cake%20(27).jpg" />
-          </a>
-        </div>
-        <div class="photo">
-          <a href="../onewishcakes/cake%20(47).jpg">
-            <img src="../onewishcakes/cake%20(47).jpg" />
-          </a>
-        </div>
-        <div class="photo">
-          <a href="../onewishcakes/cake%20(2).webp">
-            <img src="../onewishcakes/cake%20(2).webp" />
-          </a>
-        </div>
-        <div class="photo">
-          <a href="../onewishcakes/cake%20(27).webp">
-            <img src="../onewishcakes/cake%20(27).webp" />
-          </a>
-        </div>
-        <div class="photo">
-          <a href="../onewishcakes/cake%20(28).webp">
-            <img src="../onewishcakes/cake%20(28).webp" />
-          </a>
-        </div>
-        <div class="photo">
-          <a href="../onewishcakes/cake%20(29).webp">
-            <img src="../onewishcakes/cake%20(29).webp" />
-          </a>
-        </div>
-        <div class="photo">
-          <a href="../onewishcakes/cake%20(30).webp">
-            <img src="../onewishcakes/cake%20(30).webp" />
-          </a>
-        </div>
-        <div class="photo">
-          <a href="../onewishcakes/cake%20(31).webp">
-            <img src="../onewishcakes/cake%20(31).webp" />
-          </a>
-        </div>
-        <div class="photo">
-          <a href="../onewishcakes/cake%20(32).webp">
-            <img src="../onewishcakes/cake%20(32).webp" />
-          </a>
-        </div>
-        <div class="photo">
-          <a href="../onewishcakes/cake%20(33).webp">
-            <img src="../onewishcakes/cake%20(33).webp" />
-          </a>
-        </div>
-        <div class="photo">
-          <a href="../onewishcakes/cake%20(34).webp">
-            <img src="../onewishcakes/cake%20(34).webp" />
-          </a>
-        </div>
-        <div class="photo">
-          <a href="../onewishcakes/cake%20(35).webp">
-            <img src="../onewishcakes/cake%20(35).webp" />
-          </a>
-        </div>
-        <div class="photo">
-          <a href="../onewishcakes/cake%20(36).webp">
-            <img src="../onewishcakes/cake%20(36).webp" />
-          </a>
-        </div>
-        <div class="photo">
-          <a href="../onewishcakes/cake%20(37).webp">
-            <img src="../onewishcakes/cake%20(37).webp" />
-          </a>
-        </div>
-        <div class="photo">
-          <a href="../onewishcakes/cake%20(38).webp">
-            <img src="../onewishcakes/cake%20(38).webp" />
-          </a>
-        </div>
-        <div class="photo">
-          <a href="../onewishcakes/cake%20(39).webp">
-            <img src="../onewishcakes/cake%20(39).webp" />
-          </a>
-        </div>
-        <div class="photo">
-          <a href="../onewishcakes/cake%20(40).webp">
-            <img src="../onewishcakes/cake%20(40).webp" />
-          </a>
-        </div>
-        <div class="photo">
-          <a href="../onewishcakes/cake%20(41).webp">
-            <img src="../onewishcakes/cake%20(41).webp" />
-          </a>
-        </div>
-        <div class="photo">
-          <a href="../onewishcakes/cake%20(42).webp">
-            <img src="../onewishcakes/cake%20(42).webp" />
-          </a>
-        </div>
-        <div class="photo">
-          <a href="../onewishcakes/cake%20(43).webp">
-            <img src="../onewishcakes/cake%20(43).webp" />
-          </a>
-        </div>
-        <div class="photo">
-          <a href="../onewishcakes/cake%20(44).webp">
-            <img src="../onewishcakes/cake%20(44).webp" />
-          </a>
-        </div>
-        <div class="photo">
-          <a href="../onewishcakes/cake%20(45).webp">
-            <img src="../onewishcakes/cake%20(45).webp" />
-          </a>
-        </div>
-        <div class="photo">
-          <a href="../onewishcakes/cake%20(46).webp">
-            <img src="../onewishcakes/cake%20(46).webp" />
-          </a>
-        </div>
-        <div class="photo">
-          <a href="../onewishcakes/cake%20(48).webp">
-            <img src="../onewishcakes/cake%20(48).webp" />
-          </a>
-        </div>
-        <div class="photo">
-          <a href="../onewishcakes/cake%20(49).webp">
-            <img src="../onewishcakes/cake%20(49).webp" />
-          </a>
-        </div>
-        <div class="photo">
-          <a href="../onewishcakes/cake%20(50).webp">
-            <img src="../onewishcakes/cake%20(50).webp" />
-          </a>
-        </div>
-      </div>
-    </div>
+        <h1>Gallery</h1>
 
-    <div class="lightbox" id="lightbox">
-      <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
-      <img id="lightboxImage" src="" alt="Expanded view" />
-    </div>
-
-    <script>
-      let expanded = false;
-      function toggleGallery() {
-        const hiddenPhotos = document.getElementById("hiddenPhotos");
-        const expandBtn = document.getElementById("expandBtn");
-        if (!expanded) {
-          hiddenPhotos.classList.add("show");
-          expandBtn.textContent = "Show Less";
-          expanded = true;
-        } else {
-          hiddenPhotos.classList.remove("show");
-          expandBtn.textContent = "View More Photos";
-          expanded = false;
-        }
-      }
-
-      let expanded2 = false;
-      function toggleGallery2() {
-        const hiddenPhotos2 = document.getElementById("hiddenPhotos2");
-        const expandBtn2 = document.getElementById("expandBtn2");
-        if (!expanded2) {
-          hiddenPhotos2.classList.add("show");
-          expandBtn2.textContent = "Show Less";
-          expanded2 = true;
-        } else {
-          hiddenPhotos2.classList.remove("show");
-          expandBtn2.textContent = "View More Photos";
-          expanded2 = false;
-        }
-      }
-
-      // Open lightbox
-      const lightbox = document.getElementById("lightbox");
-      const lightboxImage = document.getElementById("lightboxImage");
-
-      document.querySelectorAll(".gallery .photo a").forEach((anchor) => {
-        anchor.addEventListener("click", (event) => {
-          event.preventDefault();
-          const imgSrc = anchor.getAttribute("href");
-          lightboxImage.src = imgSrc;
-          lightbox.style.display = "flex";
-        });
-      });
-
-      // Close lightbox
-      function closeLightbox() {
-        lightbox.style.display = "none";
-        lightboxImage.src = "";
-      }
-
-      // Close lightbox when clicking outside the image
-      lightbox.addEventListener("click", (event) => {
-        if (event.target === lightbox) {
-          closeLightbox();
-        }
-      });
-    </script>
-
-    <hr style="margin: 40px 0" />
-
-    <h2>Events</h2>
-    <div class="gallery">
-      <div class="photo">
-        <img src="../onewishevents/event%20(1).jpg" />
-      </div>
-      <div class="photo">
-        <img src="../onewishevents/event%20(1).webp" />
-      </div>
-      <div class="photo">
-        <img src="../onewishevents/event%20(2).jpg" />
-      </div>
-    </div>
-
-    <button class="expand-btn" onclick="toggleGallery2()" id="expandBtn2">
-      View More
-    </button>
-
-    <div class="hidden-photos" id="hiddenPhotos2">
-      <div class="gallery">
-        <div class="photo">
-          <img src="../onewishevents/event%20(2).webp" />
+        <h2>Cakes</h2>
+        <div class="gallery">
+          <div class="photo">
+            <a href="../onewishcakes/cake%20(1).jpg">
+              <img src="../onewishcakes/cake%20(1).jpg" />
+            </a>
+          </div>
+          <div class="photo">
+            <a href="../onewishcakes/cake%20(2).jpg">
+              <img src="../onewishcakes/cake%20(2).jpg" />
+            </a>
+          </div>
+          <div class="photo">
+            <a href="../onewishcakes/cake%20(3).jpg">
+              <img src="../onewishcakes/cake%20(3).jpg" />
+            </a>
+          </div>
         </div>
-        <div class="photo">
-          <img src="../onewishevents/event%20(3).webp" />
+
+        <button class="expand-btn" onclick="toggleGallery()" id="expandBtn">
+          View More
+        </button>
+
+        <div class="hidden-photos" id="hiddenPhotos">
+          <div class="gallery">
+            <div class="photo">
+              <a href="../onewishcakes/cake%20(4).jpg">
+                <img src="../onewishcakes/cake%20(4).jpg" />
+              </a>
+            </div>
+            <div class="photo">
+              <a href="../onewishcakes/cake%20(5).jpg">
+                <img src="../onewishcakes/cake%20(5).jpg" />
+              </a>
+            </div>
+            <div class="photo">
+              <a href="../onewishcakes/cake%20(6).jpg">
+                <img src="../onewishcakes/cake%20(6).jpg" />
+              </a>
+            </div>
+            <div class="photo">
+              <a href="../onewishcakes/cake%20(7).jpg">
+                <img src="../onewishcakes/cake%20(7).jpg" />
+              </a>
+            </div>
+            <div class="photo">
+              <a href="../onewishcakes/cake%20(8).jpg">
+                <img src="../onewishcakes/cake%20(8).jpg" />
+              </a>
+            </div>
+            <div class="photo">
+              <a href="../onewishcakes/cake%20(9).jpg">
+                <img src="../onewishcakes/cake%20(9).jpg" />
+              </a>
+            </div>
+            <div class="photo">
+              <a href="../onewishcakes/cake%20(10).jpg">
+                <img src="../onewishcakes/cake%20(10).jpg" />
+              </a>
+            </div>
+            <div class="photo">
+              <a href="../onewishcakes/cake%20(11).jpg">
+                <img src="../onewishcakes/cake%20(11).jpg" />
+              </a>
+            </div>
+            <div class="photo">
+              <a href="../onewishcakes/cake%20(12).jpg">
+                <img src="../onewishcakes/cake%20(12).jpg" />
+              </a>
+            </div>
+            <div class="photo">
+              <a href="../onewishcakes/cake%20(13).jpg">
+                <img src="../onewishcakes/cake%20(13).jpg" />
+              </a>
+            </div>
+            <div class="photo">
+              <a href="../onewishcakes/cake%20(14).jpg">
+                <img src="../onewishcakes/cake%20(14).jpg" />
+              </a>
+            </div>
+            <div class="photo">
+              <a href="../onewishcakes/cake%20(15).jpg">
+                <img src="../onewishcakes/cake%20(15).jpg" />
+              </a>
+            </div>
+            <div class="photo">
+              <a href="../onewishcakes/cake%20(27).jpg">
+                <img src="../onewishcakes/cake%20(27).jpg" />
+              </a>
+            </div>
+            <div class="photo">
+              <a href="../onewishcakes/cake%20(47).jpg">
+                <img src="../onewishcakes/cake%20(47).jpg" />
+              </a>
+            </div>
+            <div class="photo">
+              <a href="../onewishcakes/cake%20(2).webp">
+                <img src="../onewishcakes/cake%20(2).webp" />
+              </a>
+            </div>
+            <div class="photo">
+              <a href="../onewishcakes/cake%20(27).webp">
+                <img src="../onewishcakes/cake%20(27).webp" />
+              </a>
+            </div>
+            <div class="photo">
+              <a href="../onewishcakes/cake%20(28).webp">
+                <img src="../onewishcakes/cake%20(28).webp" />
+              </a>
+            </div>
+            <div class="photo">
+              <a href="../onewishcakes/cake%20(29).webp">
+                <img src="../onewishcakes/cake%20(29).webp" />
+              </a>
+            </div>
+            <div class="photo">
+              <a href="../onewishcakes/cake%20(30).webp">
+                <img src="../onewishcakes/cake%20(30).webp" />
+              </a>
+            </div>
+            <div class="photo">
+              <a href="../onewishcakes/cake%20(31).webp">
+                <img src="../onewishcakes/cake%20(31).webp" />
+              </a>
+            </div>
+            <div class="photo">
+              <a href="../onewishcakes/cake%20(32).webp">
+                <img src="../onewishcakes/cake%20(32).webp" />
+              </a>
+            </div>
+            <div class="photo">
+              <a href="../onewishcakes/cake%20(33).webp">
+                <img src="../onewishcakes/cake%20(33).webp" />
+              </a>
+            </div>
+            <div class="photo">
+              <a href="../onewishcakes/cake%20(34).webp">
+                <img src="../onewishcakes/cake%20(34).webp" />
+              </a>
+            </div>
+            <div class="photo">
+              <a href="../onewishcakes/cake%20(35).webp">
+                <img src="../onewishcakes/cake%20(35).webp" />
+              </a>
+            </div>
+            <div class="photo">
+              <a href="../onewishcakes/cake%20(36).webp">
+                <img src="../onewishcakes/cake%20(36).webp" />
+              </a>
+            </div>
+            <div class="photo">
+              <a href="../onewishcakes/cake%20(37).webp">
+                <img src="../onewishcakes/cake%20(37).webp" />
+              </a>
+            </div>
+            <div class="photo">
+              <a href="../onewishcakes/cake%20(38).webp">
+                <img src="../onewishcakes/cake%20(38).webp" />
+              </a>
+            </div>
+            <div class="photo">
+              <a href="../onewishcakes/cake%20(39).webp">
+                <img src="../onewishcakes/cake%20(39).webp" />
+              </a>
+            </div>
+            <div class="photo">
+              <a href="../onewishcakes/cake%20(40).webp">
+                <img src="../onewishcakes/cake%20(40).webp" />
+              </a>
+            </div>
+            <div class="photo">
+              <a href="../onewishcakes/cake%20(41).webp">
+                <img src="../onewishcakes/cake%20(41).webp" />
+              </a>
+            </div>
+            <div class="photo">
+              <a href="../onewishcakes/cake%20(42).webp">
+                <img src="../onewishcakes/cake%20(42).webp" />
+              </a>
+            </div>
+            <div class="photo">
+              <a href="../onewishcakes/cake%20(43).webp">
+                <img src="../onewishcakes/cake%20(43).webp" />
+              </a>
+            </div>
+            <div class="photo">
+              <a href="../onewishcakes/cake%20(44).webp">
+                <img src="../onewishcakes/cake%20(44).webp" />
+              </a>
+            </div>
+            <div class="photo">
+              <a href="../onewishcakes/cake%20(45).webp">
+                <img src="../onewishcakes/cake%20(45).webp" />
+              </a>
+            </div>
+            <div class="photo">
+              <a href="../onewishcakes/cake%20(46).webp">
+                <img src="../onewishcakes/cake%20(46).webp" />
+              </a>
+            </div>
+            <div class="photo">
+              <a href="../onewishcakes/cake%20(48).webp">
+                <img src="../onewishcakes/cake%20(48).webp" />
+              </a>
+            </div>
+            <div class="photo">
+              <a href="../onewishcakes/cake%20(49).webp">
+                <img src="../onewishcakes/cake%20(49).webp" />
+              </a>
+            </div>
+            <div class="photo">
+              <a href="../onewishcakes/cake%20(50).webp">
+                <img src="../onewishcakes/cake%20(50).webp" />
+              </a>
+            </div>
+          </div>
         </div>
-        <div class="photo">
-          <img src="../onewishevents/event%20(4).webp" />
+
+        <div class="lightbox" id="lightbox">
+          <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+          <img id="lightboxImage" src="" alt="Expanded view" />
         </div>
-        <div class="photo">
-          <img src="../onewishevents/event%20(5).webp" />
+
+        <script>
+          let expanded = false;
+          function toggleGallery() {
+            const hiddenPhotos = document.getElementById("hiddenPhotos");
+            const expandBtn = document.getElementById("expandBtn");
+            if (!expanded) {
+              hiddenPhotos.classList.add("show");
+              expandBtn.textContent = "Show Less";
+              expanded = true;
+            } else {
+              hiddenPhotos.classList.remove("show");
+              expandBtn.textContent = "View More Photos";
+              expanded = false;
+            }
+          }
+
+          let expanded2 = false;
+          function toggleGallery2() {
+            const hiddenPhotos2 = document.getElementById("hiddenPhotos2");
+            const expandBtn2 = document.getElementById("expandBtn2");
+            if (!expanded2) {
+              hiddenPhotos2.classList.add("show");
+              expandBtn2.textContent = "Show Less";
+              expanded2 = true;
+            } else {
+              hiddenPhotos2.classList.remove("show");
+              expandBtn2.textContent = "View More Photos";
+              expanded2 = false;
+            }
+          }
+
+          // Open lightbox
+          const lightbox = document.getElementById("lightbox");
+          const lightboxImage = document.getElementById("lightboxImage");
+
+          document.querySelectorAll(".gallery .photo a").forEach((anchor) => {
+            anchor.addEventListener("click", (event) => {
+              event.preventDefault();
+              const imgSrc = anchor.getAttribute("href");
+              lightboxImage.src = imgSrc;
+              lightbox.style.display = "flex";
+            });
+          });
+
+          // Close lightbox
+          function closeLightbox() {
+            lightbox.style.display = "none";
+            lightboxImage.src = "";
+          }
+
+          // Close lightbox when clicking outside the image
+          lightbox.addEventListener("click", (event) => {
+            if (event.target === lightbox) {
+              closeLightbox();
+            }
+          });
+        </script>
+
+        <hr style="margin: 40px 0" />
+
+        <h2>Events</h2>
+        <div class="gallery">
+          <div class="photo">
+            <img src="../onewishevents/event%20(1).jpg" />
+          </div>
+          <div class="photo">
+            <img src="../onewishevents/event%20(1).webp" />
+          </div>
+          <div class="photo">
+            <img src="../onewishevents/event%20(2).jpg" />
+          </div>
         </div>
-        <div class="photo">
-          <img src="../onewishevents/event%20(6).webp" />
-        </div>
-        <div class="photo">
-          <img src="../onewishevents/event%20(7).webp" />
-        </div>
-        <div class="photo">
-          <img src="../onewishevents/event%20(8).webp" />
-        </div>
-        <div class="photo">
-          <img src="../onewishevents/event%20(9).webp" />
-        </div>
-        <div class="photo">
-          <img src="../onewishevents/event%20(10).webp" />
+
+        <button class="expand-btn" onclick="toggleGallery2()" id="expandBtn2">
+          View More
+        </button>
+
+        <div class="hidden-photos" id="hiddenPhotos2">
+          <div class="gallery">
+            <div class="photo">
+              <img src="../onewishevents/event%20(2).webp" />
+            </div>
+            <div class="photo">
+              <img src="../onewishevents/event%20(3).webp" />
+            </div>
+            <div class="photo">
+              <img src="../onewishevents/event%20(4).webp" />
+            </div>
+            <div class="photo">
+              <img src="../onewishevents/event%20(5).webp" />
+            </div>
+            <div class="photo">
+              <img src="../onewishevents/event%20(6).webp" />
+            </div>
+            <div class="photo">
+              <img src="../onewishevents/event%20(7).webp" />
+            </div>
+            <div class="photo">
+              <img src="../onewishevents/event%20(8).webp" />
+            </div>
+            <div class="photo">
+              <img src="../onewishevents/event%20(9).webp" />
+            </div>
+            <div class="photo">
+              <img src="../onewishevents/event%20(10).webp" />
+            </div>
+          </div>
         </div>
       </div>
     </div>
