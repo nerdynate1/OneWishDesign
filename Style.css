@@ -29,14 +29,19 @@ body {
 .cakePic {
   position: relative;
   width: 100%;
+  height: 240px;
   margin: 0;
   padding: 0;
   overflow: hidden;
+  background-image: url('projectImages/cake.avif');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .cake {
   width: 100%;
-  height: 70vh;
+  height: 100vh;
   display: block;
 }
 
@@ -124,7 +129,7 @@ h1 {
 .Menu {
   height: 100vh;
   width: 180px;
-  background-color: rgb(14, 213, 248);
+  background-color: #F1F5F9;
   position: fixed;
   left: 0;
   top: 0;
@@ -133,8 +138,8 @@ h1 {
   z-index: 998;
 }
 
-h2 {
-  color: #8000ff;
+.Menu h2 {
+  color: #F4A8FF;
   font-weight: 800;
   text-align: right;
   padding: 10px 0;
@@ -642,3 +647,145 @@ ul li a:hover {
   }
 }
 
+p.big {
+  line-height: 1.8;
+}
+
+header {
+  background: #f7a1e3;
+  border-bottom: 1px solid #e5e7eb;
+  position: sticky; top: 0;
+}
+.nav { display: flex; justify-content: space-between; align-items: center; }
+nav ul { list-style: none; display: flex; gap: 1rem; }
+nav a { text-decoration: none; color: var(--muted); font-weight: 600; }
+nav a:hover { color: var(--brand); }
+.logo {
+  width: 60px; height: 60px; border-radius: 10px;
+  background: var(--brand); display: grid; place-items: center;
+  color: white; font-weight: 700;
+}
+.org-name { font-weight: 800; }
+
+.btn {
+  background: var(--brand);
+  color: white;
+  padding: .6rem .9rem;
+  border-radius: var(--radius);
+  text-decoration: none;
+  font-weight: 700;
+  display: inline-block;
+}
+.btn.secondary {
+  background: transparent;
+  border: 2px solid var(--brand);
+  color: var(--brand);
+}
+
+.hero { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; padding: 2rem 0; }
+.hero-card { background: white; padding: 1.5rem; border-radius: var(--radius); }
+.eyebrow { color: var(--brand); font-weight: 700; letter-spacing: .05em; }
+.lead { color: var(--muted); margin: 1rem 0; }
+.stats { display: flex; gap: 1rem; margin-top: 1rem; }
+.stat { background: #fef2f2; padding: .5rem .75rem; border-radius: var(--radius); font-weight: 600; }
+
+.card { background: white; padding: 1rem; border-radius: var(--radius); box-shadow: 0 2px 6px rgba(0,0,0,.05); }
+
+.gallery { grid-template-columns: repeat(auto-fill,minmax(160px,1fr)); }
+.gallery img { width: 100%; height: 140px; object-fit: cover; border-radius: var(--radius); }
+
+.events { display: grid; gap: .75rem; }
+.event { display: flex; gap: 1rem; align-items: center; background: white; padding: .75rem; border-radius: var(--radius); }
+.event .date { background: #fee2e2; color: var(--brand); font-weight: 700; padding: .5rem; border-radius: var(--radius); min-width: 70px; text-align: center; }
+
+footer { border-top: 1px solid #e5e7eb; padding: 1rem 0; margin-top: 2rem; }
+.foot-grid { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem; }
+.small { font-size: .9rem; }
+.muted { color: var(--muted); }
+
+@media (max-width: 768px) {
+  .hero { grid-template-columns: 1fr; }
+  .two-col { grid-template-columns: 1fr; }
+}
+
+#mission-title {
+  font-size: x-large;
+  font-style: italic;
+  font-family: Roboto;
+  margin-right: 20px;
+  text-align: center;
+}
+
+#missionText {
+  background-color: #E5E7EB;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+#missionText p {
+  margin-bottom: 20px;
+}
+
+#missionText span.big {
+  font-size: 25px;
+  font-style: italic;
+  font-family: Roboto;
+  margin-right: 20px;
+}
+
+#missionText p.focus {
+  padding: 10px;
+  font-style: italic;
+  font-weight: 600;
+  background-color: lightblue;
+  border-radius: 10px;
+}
+
+section.testimonials {
+  margin-top: 20px;
+  background-color: #f7a1e3;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+section.testimonials th {
+  padding: 20px 10px 10px 10px;
+  font-size: 25px;
+  font-style: italic;
+  font-family: Roboto;
+}
+
+section.testimonials td {
+  padding: 10px;
+  text-align: center;
+}
+section.testimonials p.Testimonialspace{
+  padding: 10px 10px 10px 20px;
+  text-align: center;
+}
+
+#Involved-title {
+  font-size: x-large;
+  font-style: italic;
+  font-family: Roboto;
+  margin-right: 20px;
+  text-align: center;
+}
+
+section.Opportunities{
+  margin-top: 20px;
+  background-color: #f7a1e3;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+section.Opportunities th {
+  padding: 20px 10px 10px 10px;
+  font-size: 25px;
+  font-style: italic;
+  font-family: Roboto;
+  text-align: center;
+}
