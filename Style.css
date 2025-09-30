@@ -880,3 +880,110 @@ section.Opportunities th {
 .about-container a:hover {
   text-decoration: underline;
 }
+
+.head {
+  text-align: center;
+  padding: 40px 20px 20px;
+  background-color: #f5f5f5;
+}
+
+.head h1 {
+  font-size: 30px;
+  margin-bottom: 10px;
+  color: #2c3e50;
+  font-family: "Poppins", sans-serif;
+}
+
+.pressGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.pressCard {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  transition: box-shadow 0.3s;
+}
+
+.pressCard img {
+  max-width: 120px;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.pressCard h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.pressCard p {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.pressCard a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.pressCard:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.box {
+  display: inline-block;
+  background-color: #f7a1e3;
+  padding: 10px 15px;
+  border-radius: 6px;
+  margin-top: 10px;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.viewMoreCard {
+  cursor: pointer;
+  background-color: #f7a1e3;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 18px;
+  height: 300px;
+  transition: background-color 0.3s ease;
+}
+
+.viewMoreCard:hover {
+  background-color: #d97cc1;
+}
+
+.hidden {
+  display: none;
+}
+
+.viewLessCard {
+  cursor: pointer;
+  background-color: #f7a1e3;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 18px;
+  height: 300px;
+  transition: background-color 0.3s ease;
+}
+
+.viewLessCard:hover {
+  background-color: #d97cc1;
+}
