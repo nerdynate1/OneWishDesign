@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Get Involved | One Wish Project</title>
+    <!-- Link your existing CSS file -->
+    <link rel="stylesheet" href="Style.css" />
+    <style>
+      body {
+        background-color: #e8f4f8;
+      }
+
+      .get-involved-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Two columns */
+        gap: 20px; /* Space between grid items */px;
+      }
+
+      .get-involved-grid .card {
+        background-color: #f9f9f9;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        text-align: center;
+        padding: 15px;
+      }
+
+      .get-involved-grid .card:nth-child(1),
+      .get-involved-grid .card:nth-child(2) {
+        background-color: #ffe4e1; /* pink for the first row */
+      }
+
+      .get-involved-grid .card:nth-child(3),
+      .get-involved-grid .card:nth-child(4) {
+        background-color: #ffffff; /* white for the second row */
+      }
+
+      .get-involved-grid .card:nth-child(5),
+      .get-involved-grid .card:nth-child(6) {
+        background-color: #ffe4e1; /*pink for the third row */
+      }
+
+      .get-involved-grid .card img {
+        width: 100%;
+        height: auto;
+        border-bottom: 1px solid #ddd;
+        margin-bottom: 15px;
+      }
+
+      .get-involved-grid .card:nth-child(2) img {
+        width: 25%;
+        height: auto;
+      }
+
+      .get-involved-grid .card:nth-child(3) img {
+        width: 25%;
+        height: auto;
+      }
+
+      .get-involved-grid .card:nth-child(6) img {
+        width: 25%; 
+        height: auto; 
+      }
+
+      .get-involved-grid .card h2 {
+        font-size: 20px;
+        margin: 10px 0;
+        color: #333;
+        text-align: center;
+      }
+
+      .get-involved-grid .card p {
+        font-size: 16px;
+        color: #666;
+        margin-bottom: 15px;
+      }
+
+      .get-involved-grid .card .btn {
+        display: inline-block;
+        padding: 10px 20px;
+        font-size: 16px;
+        color: white;
+        background-color: #007bff;
+        border: none;
+        border-radius: 5px;
+        text-decoration: none;
+        cursor: pointer;
+      }
+
+      .get-involved-grid .card .btn:hover {
+        background-color: #0056b3;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="pageWrapper">
+      <input type="checkbox" id="Options" />
+      <label for="Options" class="select">
+        <span class="top_Line common"></span>
+        <span class="middle_Line common"></span>
+        <span class="bottom_Line common"></span>
+      </label>
+
+      <div class="Menu">
+        <h2>Menu</h2>
+        <ul>
+          <li>
+            <a href="About.html"
+              ><i class="fa-regular fa-address-card"></i> About</a
+            >
+            <a href="Contacts.html"
+              ><i class="fa-solid fa-address-book"></i> Contacts</a
+            >
+            <a href="Events.html"
+              ><i class="fa-regular fa-calendar-days"></i> Events</a
+            >
+            <a href="Gallery.html"
+              ><i class="fa-solid fa-images"></i> Gallery</a
+            >
+            <a href="Press.html"><i class="fa-solid fa-newspaper"></i> Press</a>
+            <a href="Mainpage.html"><i class="fas fa-home"></i> Home</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="mainContent">
+        <header class="cakePic">
+          <img src="projectImages/cake.avif" alt="cake" class="cake" />
+          <div class="mainPicture">
+            <img
+              src="projectImages/One wish logo.jpg"
+              alt="logo"
+              class="logo"
+            />
+            <h1>
+              One Wish Project<br />Celebrating Birthdays, Delivering Hope.
+            </h1>
+            <img
+              src="projectImages/One wish logo.jpg"
+              alt="logo2"
+              class="logo2"
+            />
+          </div>
+        </header>
+
+        <!-- Grid Section -->
+        <section class="get-involved-grid">
+          <!-- Card 1 -->
+          <div class="card">
+            <h2>Make a Tax-Deductible Donation</h2>
+            <img
+              src="projectImages/texdonation.jpg"
+              alt="Tax Donation"
+              style="width: 25%; height: auto"
+            />
+            <p>
+              Your donation will help us bring birthday joy to homeless and
+              underprivileged children.
+            </p>
+            <a href="#" class="btn">Donate</a>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="card">
+            <img src="projectImages/volunteering.jpg" alt="Volunteering" />
+            <h2>Volunteer Sponsor a Birthday</h2>
+            <p>
+              Help us celebrate children in need by delivering cakes, presents,
+              and joy to brighten their special day.
+            </p>
+            <a href="#" class="btn">Download Application</a>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="card">
+            <img src="projectImages/inhonorof.jpg" alt="" />
+            <h2>In Honor Of</h2>
+            <p>
+              Donate in honor of a loved one to support a child’s birthday
+              celebration.
+            </p>
+            <a href="#" class="btn">Donate</a>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="card">
+            <img
+              src="projectImages/amazonwishlist.jpg"
+              alt="Amazon Wishlist"
+              style="width: 25%; height: auto"
+            />
+            <h2>Amazon Wishlist</h2>
+            <p>
+              Shop our Amazon Wishlist to provide gifts for children’s birthday
+              celebrations.
+            </p>
+            <a href="#" class="btn">Shop Wishlist</a>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="card">
+            <img
+              src="projectImages/employeeappreciation.jpg"
+              alt="Employee Appreciation"
+              style="width: 25%; height: auto"
+            />
+            <h2>Employee Appreciation Program</h2>
+            <p>
+              Encourage your team to give back by sponsoring a birthday
+              celebration as part of our program.
+            </p>
+            <a href="#" class="btn">Donate</a>
+          </div>
+
+          <!-- Card 6 -->
+          <div class="card">
+            <img src="projectImages/toydonations.jpg" alt="Toy donations" />
+            <h2>Toy Donation</h2>
+            <p>
+              Donate new toys to help make birthdays memorable for children in
+              shelters.
+            </p>
+            <a href="#" class="btn">Contact Us</a>
+          </div>
+        </section>
+      </div>
+    </div>
+  </body>
+</html>
