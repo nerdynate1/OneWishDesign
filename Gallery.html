@@ -220,16 +220,15 @@
             background-color: #ff1493; /* darker pink on hover */
           }
 
-          
           .mainContent header.cakePic {
-            height: 200px; 
+            height: 200px;
             display: flex;
             align-items: center;
             justify-content: center;
           }
 
           .mainContent header.cakePic .mainPicture h1 {
-            font-size: 20px; 
+            font-size: 20px;
             text-align: center;
           }
 
@@ -265,17 +264,36 @@
             }
           }
 
-          // Open lightbox
+          function toggleGallery3() {
+            const hiddenPhotos3 = document.getElementById("hiddenPhotos3");
+            const expandBtn3 = document.getElementById("expandBtn3");
+            if (hiddenPhotos3.classList.contains("active")) {
+              hiddenPhotos3.classList.remove("active");
+              expandBtn3.textContent = "View More";
+            } else {
+              hiddenPhotos3.classList.add("active");
+              expandBtn3.textContent = "View Less";
+            }
+          }
+
+          // Open lightbox for all gallery images 
           const lightbox = document.getElementById("lightbox");
           const lightboxImage = document.getElementById("lightboxImage");
 
-          document.querySelectorAll(".gallery .photo a").forEach((anchor) => {
-            anchor.addEventListener("click", (event) => {
+          
+          document.addEventListener("click", function (event) {
+            if (
+              event.target.tagName === "IMG" &&
+              event.target.closest(".photo") &&
+              event.target.closest(".photo").querySelector("a") ===
+                event.target.parentElement
+            ) {
               event.preventDefault();
+              const anchor = event.target.parentElement;
               const imgSrc = anchor.getAttribute("href");
               lightboxImage.src = imgSrc;
               lightbox.style.display = "flex";
-            });
+            }
           });
 
           // Close lightbox
@@ -356,6 +374,182 @@
             </div>
           </div>
         </div>
+
+        <h2>Children we've supported</h2>
+        <div class="gallery">
+          <div class="photo">
+            <a href="projectImages/support_kids (1).jpg">
+              <img
+                src="projectImages/support_kids (1).jpg"
+                alt="Supported Child 1"
+              />
+            </a>
+          </div>
+          <div class="photo">
+            <a href="projectImages/support_kids (2).jpg">
+              <img
+                src="projectImages/support_kids (2).jpg"
+                alt="Supported Child 2"
+              />
+            </a>
+          </div>
+          <div class="photo">
+            <a href="projectImages/support_kids (3).jpg">
+              <img
+                src="projectImages/support_kids (3).jpg"
+                alt="Supported Child 3"
+              />
+            </a>
+          </div>
+        </div>
+
+        <button class="expand-btn" onclick="toggleGallery3()" id="expandBtn3">
+          View More
+        </button>
+
+        <div class="hidden-photos" id="hiddenPhotos3">
+          <div class="gallery">
+            <div class="photo">
+              <a href="projectImages/support_kids (4).jpg">
+                <img
+                  src="projectImages/support_kids (4).jpg"
+                  alt="Supported Child 4"
+                />
+              </a>
+            </div>
+            <div class="photo">
+              <a href="projectImages/support_kids (5).jpg">
+                <img
+                  src="projectImages/support_kids (5).jpg"
+                  alt="Supported Child 5"
+                />
+              </a>
+            </div>
+            <div class="photo">
+              <a href="projectImages/support_kids (6).jpg">
+                <img
+                  src="projectImages/support_kids (6).jpg"
+                  alt="Supported Child 6"
+                />
+              </a>
+            </div>
+            <div class="photo">
+              <a href="projectImages/support_kids (7).jpg">
+                <img
+                  src="projectImages/support_kids (7).jpg"
+                  alt="Supported Child 7"
+                />
+              </a>
+            </div>
+            <div class="photo">
+              <a href="projectImages/support_kids (8).jpg">
+                <img
+                  src="projectImages/support_kids (8).jpg"
+                  alt="Supported Child 8"
+                />
+              </a>
+            </div>
+            <div class="photo">
+              <a href="projectImages/support_kids (9).jpg">
+                <img
+                  src="projectImages/support_kids (9).jpg"
+                  alt="Supported Child 9"
+                />
+              </a>
+            </div>
+            <div class="photo">
+              <a href="projectImages/support_kids (10).jpg">
+                <img
+                  src="projectImages/support_kids (10).jpg"
+                  alt="Supported Child 10"
+                />
+              </a>
+            </div>
+            <div class="photo">
+              <a href="projectImages/support_kids (11).jpg">
+                <img
+                  src="projectImages/support_kids (11).jpg"
+                  alt="Supported Child 11"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <footer class="siteFooter">
+          <div class="footerContent">
+            <div class="footerSection">
+              <h3>One Wish Project</h3>
+              <p>Celebrating Birthdays, Delivering Hope.</p>
+              <div class="socialLinks">
+                <a
+                  href="https://www.instagram.com/onewishproject"
+                  target="_blank"
+                  aria-label="Instagram"
+                >
+                  <i class="fab fa-instagram"></i>
+                </a>
+                <a
+                  href="https://www.facebook.com"
+                  target="_blank"
+                  aria-label="Facebook"
+                >
+                  <i class="fab fa-facebook"></i>
+                </a>
+                <a
+                  href="https://www.twitter.com"
+                  target="_blank"
+                  aria-label="Twitter"
+                >
+                  <i class="fab fa-twitter"></i>
+                </a>
+                <a href="mailto:info@onewishproject.org" aria-label="Email">
+                  <i class="fa fa-envelope"></i>
+                </a>
+              </div>
+            </div>
+            <div class="footerSection">
+              <h4>Quick Links</h4>
+              <ul>
+                <li><a href="Mainpage.html">Home</a></li>
+                <li><a href="About.html">About Us</a></li>
+                <li><a href="getInvolved.html">Get Involved</a></li>
+                <li><a href="Events.html">Events</a></li>
+                <li><a href="Gallery.html">Gallery</a></li>
+                <li><a href="Press.html">Press</a></li>
+              </ul>
+            </div>
+            <div class="footerSection">
+              <h4>Get Involved</h4>
+              <ul>
+                <li><a href="#">Make a Donation</a></li>
+                <li><a href="#">Volunteer</a></li>
+                <li><a href="#">Sponsor a Birthday</a></li>
+                <li><a href="#">In Honor Of</a></li>
+                <li><a href="#">Amazon Wishlist</a></li>
+                <li><a href="#">Employee Appreciation</a></li>
+                <li><a href="#">Toy Donation</a></li>
+              </ul>
+            </div>
+            <div class="footerSection">
+              <h4>Contact Info</h4>
+              <div class="contactInfo">
+                <p><i class="fa fa-envelope"></i> info@onewishproject.org</p>
+                <p><i class="fa fa-phone"></i> (123) 456-7890</p>
+                <p>
+                  <i class="fa fa-map-marker-alt"></i> 123 Wish Lane, Dream
+                  City, DC 12345
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="footerBottom">
+            <p>
+              &copy; 2025 by One Wish Project. | Celebrating Birthdays,
+              Delivering Hope.
+            </p>
+          </div>
+        </footer>
       </div>
     </div>
   </body>
