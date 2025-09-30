@@ -29,19 +29,14 @@ body {
 .cakePic {
   position: relative;
   width: 100%;
-  height: 240px;
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-image: url('projectImages/cake.avif');
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
 }
 
 .cake {
   width: 100%;
-  height: 100vh;
+  height: 70vh;
   display: block;
 }
 
