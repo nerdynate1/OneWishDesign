@@ -264,17 +264,37 @@
             }
           }
 
-          // Open lightbox
+          function toggleGallery3() {
+            const hiddenPhotos3 = document.getElementById("hiddenPhotos3");
+            const expandBtn3 = document.getElementById("expandBtn3");
+            if (hiddenPhotos3.classList.contains("active")) {
+              hiddenPhotos3.classList.remove("active");
+              expandBtn3.textContent = "View More";
+            } else {
+              hiddenPhotos3.classList.add("active");
+              expandBtn3.textContent = "View Less";
+            }
+          }
+
+          // Open lightbox for all gallery images (including hidden/expanded)
           const lightbox = document.getElementById("lightbox");
           const lightboxImage = document.getElementById("lightboxImage");
 
-          document.querySelectorAll(".gallery .photo a").forEach((anchor) => {
-            anchor.addEventListener("click", (event) => {
+          // Use event delegation for all galleries
+          document.addEventListener("click", function (event) {
+            // Only handle clicks on gallery photo links
+            if (
+              event.target.tagName === "IMG" &&
+              event.target.closest(".photo") &&
+              event.target.closest(".photo").querySelector("a") ===
+                event.target.parentElement
+            ) {
               event.preventDefault();
+              const anchor = event.target.parentElement;
               const imgSrc = anchor.getAttribute("href");
               lightboxImage.src = imgSrc;
               lightbox.style.display = "flex";
-            });
+            }
           });
 
           // Close lightbox
@@ -359,24 +379,101 @@
         <h2>Children we've supported</h2>
         <div class="gallery">
           <div class="photo">
-            <a href="projectImages/volunteering.jpg">
-              <img src="projectImages/volunteering.jpg" alt="Child 1" />
+            <a href="projectImages/support_kids (1).jpg">
+              <img
+                src="projectImages/support_kids (1).jpg"
+                alt="Supported Child 1"
+              />
             </a>
           </div>
           <div class="photo">
-            <a href="projectImages/inhonorof.jpg">
-              <img src="projectImages/inhonorof.jpg" alt="Child 2" />
+            <a href="projectImages/support_kids (2).jpg">
+              <img
+                src="projectImages/support_kids (2).jpg"
+                alt="Supported Child 2"
+              />
             </a>
           </div>
           <div class="photo">
-            <a href="projectImages/employeeappreciation.jpg">
-              <img src="projectImages/employeeappreciation.jpg" alt="Child 3" />
+            <a href="projectImages/support_kids (3).jpg">
+              <img
+                src="projectImages/support_kids (3).jpg"
+                alt="Supported Child 3"
+              />
             </a>
           </div>
-          <div class="photo">
-            <a href="projectImages/toydonations.jpg">
-              <img src="projectImages/toydonations.jpg" alt="Child 4" />
-            </a>
+        </div>
+
+        <button class="expand-btn" onclick="toggleGallery3()" id="expandBtn3">
+          View More
+        </button>
+
+        <div class="hidden-photos" id="hiddenPhotos3">
+          <div class="gallery">
+            <div class="photo">
+              <a href="projectImages/support_kids (4).jpg">
+                <img
+                  src="projectImages/support_kids (4).jpg"
+                  alt="Supported Child 4"
+                />
+              </a>
+            </div>
+            <div class="photo">
+              <a href="projectImages/support_kids (5).jpg">
+                <img
+                  src="projectImages/support_kids (5).jpg"
+                  alt="Supported Child 5"
+                />
+              </a>
+            </div>
+            <div class="photo">
+              <a href="projectImages/support_kids (6).jpg">
+                <img
+                  src="projectImages/support_kids (6).jpg"
+                  alt="Supported Child 6"
+                />
+              </a>
+            </div>
+            <div class="photo">
+              <a href="projectImages/support_kids (7).jpg">
+                <img
+                  src="projectImages/support_kids (7).jpg"
+                  alt="Supported Child 7"
+                />
+              </a>
+            </div>
+            <div class="photo">
+              <a href="projectImages/support_kids (8).jpg">
+                <img
+                  src="projectImages/support_kids (8).jpg"
+                  alt="Supported Child 8"
+                />
+              </a>
+            </div>
+            <div class="photo">
+              <a href="projectImages/support_kids (9).jpg">
+                <img
+                  src="projectImages/support_kids (9).jpg"
+                  alt="Supported Child 9"
+                />
+              </a>
+            </div>
+            <div class="photo">
+              <a href="projectImages/support_kids (10).jpg">
+                <img
+                  src="projectImages/support_kids (10).jpg"
+                  alt="Supported Child 10"
+                />
+              </a>
+            </div>
+            <div class="photo">
+              <a href="projectImages/support_kids (11).jpg">
+                <img
+                  src="projectImages/support_kids (11).jpg"
+                  alt="Supported Child 11"
+                />
+              </a>
+            </div>
           </div>
         </div>
 
