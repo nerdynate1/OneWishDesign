@@ -276,13 +276,12 @@
             }
           }
 
-          // Open lightbox for all gallery images (including hidden/expanded)
+          // Open lightbox for all gallery images 
           const lightbox = document.getElementById("lightbox");
           const lightboxImage = document.getElementById("lightboxImage");
 
-          // Use event delegation for all galleries
+          
           document.addEventListener("click", function (event) {
-            // Only handle clicks on gallery photo links
             if (
               event.target.tagName === "IMG" &&
               event.target.closest(".photo") &&
