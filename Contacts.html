@@ -10,7 +10,7 @@
     />
     <link rel="stylesheet" type="text/css" href="Style.css" />
 </head>
-<body>
+<body class = contact-page>
      <div class="pageWrapper">
       <input type="checkbox" id="Options" />
       <label for="Options" class="select">
@@ -64,9 +64,59 @@
           </div>
         </header>
 
-      <section class ="contactsContent">
-        <h1>hi</h1>
-    </section>
+     <section class="contact-section">
+    
+    <div class="contact-info">
+      <h2>Get in Touch</h2>
+      <p><strong>One Wish Project</strong></p>
+      <p>P.O. Box 605</p>
+      <p>Andover, MA 01810</p>
+      <p><strong>Phone:</strong> 978-885-9435</p>
+      <p>
+        One Wish Project offers volunteers a wonderful experience to sponsor a birthday
+        for a child living in a local homeless shelter. Visit our Get Involved page or
+        complete the form below.
+      </p>
+      <img src="projectImages/baking.png" alt="One of our members baking" class="contact-image">
+    </div>
+
+    <!-- Contact Form -->
+    <div class="contact-form">
+      <form>
+        <label for="first">First Name</label>
+        <input type="text" id="first" name="first">
+
+        <label for="last">Last Name</label>
+        <input type="text" id="last" name="last">
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email">
+
+        <label for="subject">Subject</label>
+        <input type="text" id="subject" name="subject">
+
+        <label for="interest">I'd like more information about:</label>
+        <select id="interest" name="interest">
+          <option value="toy-donation">Toy Donation</option>
+          <option value="toy-drive">Host a Toy Drive</option>
+          <option value="corporate">Corporate Sponsorship</option>
+          <option value="other">Other (please explain below)</option>
+        </select>
+
+        <label for="message">Type your message here...</label>
+        <textarea id="message" name="message" rows="5"></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Location Section -->
+  <section class="location-section">
+    <h3>Our Location</h3>
+    <img src="projectImages/location.png" alt="One Wish Project location">
+  </section>
+
 </div>
       <footer class="siteFooter">
           <div class="footerContent">

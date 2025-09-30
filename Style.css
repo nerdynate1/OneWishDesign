@@ -988,3 +988,146 @@ section.Opportunities th {
 .viewLessCard:hover {
   background-color: #d97cc1;
 }
+.serve-section {
+  max-width: 1400px;
+  margin: 3rem auto;
+  padding: 2rem;
+  
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  text-align: center;
+}
+
+.serve-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #4b2e83; /* deep purple accent */
+}
+
+.serve-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.serve-item {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.serve-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+}
+
+.serve-item h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #f7a1e3;
+}
+
+.serve-item p {
+  font-size: 0.95rem;
+  color: #666;
+  margin: 0;
+}
+
+.contact-section {
+      max-width: 1000px;
+      margin: 3rem auto;
+      padding: 2rem;
+      background: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+      display: flex;
+      gap: 2rem;
+      align-items: flex-start;
+    }
+
+    .contact-info {
+      flex: 1;
+    }
+
+    .contact-info h2 {
+      margin-top: 0;
+      color: #5a2a83;
+    }
+
+    .contact-info p {
+      margin: 0.5rem 0;
+    }
+
+    .contact-form {
+      flex: 1;
+    }
+
+    .contact-form label {
+      display: block;
+      margin-top: 1rem;
+      font-weight: bold;
+    }
+
+    .contact-form input,
+    .contact-form select,
+    .contact-form textarea {
+      width: 100%;
+      padding: 0.75rem;
+      margin-top: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+
+    .contact-form button {
+      margin-top: 1rem;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      background: #5a2a83;
+      color: #fff;
+      font-size: 1rem;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .contact-form button:hover {
+      background: #431f64;
+    }
+
+    .contact-image {
+      max-width: 300px;
+      border-radius: 12px;
+      object-fit: cover;
+    }
+
+    .location-section {
+      max-width: 1000px;
+      margin: 2rem auto;
+      text-align: center;
+    }
+
+    .location-section h3 {
+      color: #5a2a83;
+      margin-bottom: 1rem;
+    }
+
+    .location-section img {
+      width: 100%;
+      max-height: 400px;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+    }
+
+    .contact-page .pageWrapper {
+  display: flex;
+  flex-direction: column; 
+  min-height: 100vh;
+}
+
+.contact-page .mainContent {
+  flex: 1; 
+}
